@@ -1,8 +1,8 @@
-ALITECHGRID.COM — AI & CLOUD TRAINING PORTAL UPDATE
+ALITECHGRID.COM — AI, SOVEREIGN AI & CLOUD TRAINING PORTAL UPDATE
 
 This patch contains:
-- education.html — flagship AI & Cloud Training portal
-- proposal.html — Request an AI/Cloud Training Proposal form
+- education.html — flagship AI, Sovereign AI & Cloud Training portal
+- proposal.html — Request an AI/Sovereign AI/Cloud Training Proposal form
 - assets/js/main.js — adds Training and Request Proposal links across the website
 - sitemap.xml — includes the proposal page and prioritizes training
 
@@ -14,7 +14,7 @@ UPLOAD
 5. Existing education.html, assets/js/main.js and sitemap.xml will be replaced.
 6. proposal.html will be added.
 7. Commit message:
-   Add AI and cloud training proposal portal
+   Add AI, sovereign AI and cloud training proposal portal
 8. Commit directly to main.
 9. Wait for GitHub Pages to redeploy.
 

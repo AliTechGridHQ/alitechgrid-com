@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Request an AI or Cloud Training Proposal | AliTechGrid</title>
-  <meta name="description" content="Request a tailored proposal for institutional or corporate AI and cloud training, faculty development, workshops, labs and train-the-trainer programs.">
+  <meta name="description" content="Request a tailored proposal for institutional or corporate AI, sovereign AI and cloud training, faculty development, workshops, labs and train-the-trainer programs.">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://alitechgrid.com/proposal.html">
   <meta property="og:type" content="website">
@@ -87,6 +87,8 @@
               <option>Generative AI and workplace productivity</option>
               <option>Applied AI for education and training</option>
               <option>AI governance, risk and institutional policy</option>
+              <option>Sovereign AI, private/local AI and data residency</option>
+              <option>Institutional AI architecture and approved knowledge retrieval</option>
               <option>AWS cloud foundations</option>
               <option>Cloud architecture and solution design</option>
               <option>Cloud networking, security and operations</option>
@@ -104,6 +106,30 @@
               <option>Corporate staff and managers</option>
               <option>Students or workforce learners</option>
               <option>Mixed institutional cohort</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-grid">
+          <label>Sovereignty requirement
+            <select name="sovereignty">
+              <option>Not yet determined</option>
+              <option>Local or on-premises AI preferred</option>
+              <option>Private cloud deployment preferred</option>
+              <option>Canadian data residency required</option>
+              <option>Hybrid sovereign architecture</option>
+              <option>Governance and options assessment required</option>
+              <option>No specific sovereignty requirement</option>
+            </select>
+          </label>
+          <label>Current environment
+            <select name="environment">
+              <option>Not yet assessed</option>
+              <option>On-premises infrastructure</option>
+              <option>AWS cloud</option>
+              <option>Microsoft Azure</option>
+              <option>Google Cloud</option>
+              <option>Hybrid or multi-cloud</option>
+              <option>Other environment</option>
             </select>
           </label>
         </div>
@@ -161,7 +187,8 @@
         <h2>What the proposal can include</h2>
         <ul>
           <li>Training-needs analysis and audience segmentation</li>
-          <li>AI or cloud curriculum mapped to measurable outcomes</li>
+          <li>AI, sovereign AI or cloud curriculum mapped to measurable outcomes</li>
+          <li>Data residency, local/private AI and governance options</li>
           <li>Executive, faculty, technical or workforce pathways</li>
           <li>Instructor-led delivery, demonstrations and guided labs</li>
           <li>Participant and instructor resources</li>
@@ -186,7 +213,7 @@
     <div class="footer-grid">
       <div>
         <img class="footer-logo" src="assets/img/alitechgrid-international-logo.png" alt="AliTechGrid International">
-        <p>AI and cloud training, institutional capability development and responsible technology adoption for universities, businesses and public-sector organizations.</p>
+        <p>AI, sovereign AI and cloud training, institutional capability development and responsible technology adoption for universities, businesses and public-sector organizations.</p>
       </div>
       <div>
         <h3>Training</h3>
@@ -234,6 +261,8 @@ Country/Region: ${data.get('country')}
 Proposal deadline: ${data.get('deadline') || 'Not specified'}
 
 Primary training area: ${data.get('trainingArea')}
+Sovereignty requirement: ${data.get('sovereignty')}
+Current environment: ${data.get('environment')}
 Audience: ${data.get('audience')}
 Estimated participants: ${data.get('participants') || 'Not specified'}
 Preferred delivery: ${data.get('delivery')}
