@@ -23,8 +23,49 @@
     el.textContent = new Date().getFullYear();
   });
 
-  const menuButton = document.querySelector("[data-menu-button]");
   const nav = document.querySelector("[data-main-nav]");
+  if (nav) {
+    const trainingLink = nav.querySelector('a[href="education.html"]');
+    if (trainingLink) trainingLink.textContent = "AI & Cloud Training";
+
+    if (!nav.querySelector('a[href="proposal.html"]')) {
+      const proposalLink = document.createElement("a");
+      proposalLink.href = "proposal.html";
+      proposalLink.textContent = "Request Proposal";
+      const contactLink = nav.querySelector('a[href="contact.html"]');
+      if (contactLink) nav.insertBefore(proposalLink, contactLink);
+      else nav.appendChild(proposalLink);
+    }
+  }
+
+  const path = window.location.pathname.toLowerCase();
+  const headerCta = document.querySelector(".header-cta");
+  if (headerCta && (path.endsWith("/education.html") || path.endsWith("/proposal.html"))) {
+    headerCta.removeAttribute("data-consultation-link");
+    headerCta.href = "proposal.html";
+    headerCta.target = "";
+    headerCta.rel = "";
+    headerCta.textContent = "Request training proposal";
+  }
+
+  if (path.endsWith("/") || path.endsWith("/index.html")) {
+    const actions = document.querySelector(".hero-actions");
+    if (actions && !actions.querySelector('a[href="education.html"]')) {
+      const training = document.createElement("a");
+      training.className = "button button-secondary";
+      training.href = "education.html";
+      training.textContent = "Explore AI & Cloud training";
+      actions.appendChild(training);
+
+      const proposal = document.createElement("a");
+      proposal.className = "button button-secondary";
+      proposal.href = "proposal.html";
+      proposal.textContent = "Request training proposal";
+      actions.appendChild(proposal);
+    }
+  }
+
+  const menuButton = document.querySelector("[data-menu-button]");
   if (menuButton && nav) {
     menuButton.addEventListener("click", () => {
       const isOpen = menuButton.getAttribute("aria-expanded") === "true";
@@ -35,6 +76,14 @@
 
   const form = document.querySelector("[data-email-request-form]");
   if (form) {
+    const projectType = form.querySelector('select[name="projectType"]');
+    if (projectType && !Array.from(projectType.options).some(o => o.value === "AI and cloud training proposal")) {
+      const option = document.createElement("option");
+      option.value = "AI and cloud training proposal";
+      option.textContent = "AI and cloud training proposal";
+      projectType.insertBefore(option, projectType.firstChild);
+    }
+
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const data = new FormData(form);

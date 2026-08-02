@@ -1,0 +1,28 @@
+ALITECHGRID.COM — AI & CLOUD TRAINING PORTAL UPDATE
+
+This patch contains:
+- education.html — flagship AI & Cloud Training portal
+- proposal.html — Request an AI/Cloud Training Proposal form
+- assets/js/main.js — adds Training and Request Proposal links across the website
+- sitemap.xml — includes the proposal page and prioritizes training
+
+UPLOAD
+1. Extract this ZIP.
+2. Open GitHub repository: AliTechGridHQ/alitechgrid-com
+3. Click Add file (+) → Upload files.
+4. Upload the CONTENTS of this extracted folder.
+5. Existing education.html, assets/js/main.js and sitemap.xml will be replaced.
+6. proposal.html will be added.
+7. Commit message:
+   Add AI and cloud training proposal portal
+8. Commit directly to main.
+9. Wait for GitHub Pages to redeploy.
+
+TEST
+- https://alitechgrid.com/education.html
+- https://alitechgrid.com/proposal.html
+- Submit one proposal test and confirm it prepares an email to:
+  training@alitechgrid.com
+
+IMPORTANT
+Confirm that training@alitechgrid.com exists as a Zoho alias or mailbox before public use.
