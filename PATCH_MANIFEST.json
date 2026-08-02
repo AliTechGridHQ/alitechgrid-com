@@ -1,26 +1,13 @@
 {
-  "UPLOAD_INSTRUCTIONS.txt": {
-    "bytes": 2270,
-    "sha256": "9df1ea2d85b33b0f6ff71b32df9c8326058f392d2a408eb454d705d081ffde39"
+  "target_repository": "AliTechGridHQ/alitechgrid-com",
+  "files": [
+    "index.html"
+  ],
+  "change": {
+    "from": "AliTechGrid International \u00b7 AI \u00b7 Cloud \u00b7 Education",
+    "to": "ALITECHGRID INTERNATIONAL \u00b7 AI \u00b7 SOVEREIGN AI \u00b7 CLOUD"
   },
-  "assets/js/main.js": {
-    "bytes": 3586,
-    "sha256": "f37ad8ed7281d8a0aaf788bfe01ea367448315032a91fdcdd49f3ec9546bcc14"
-  },
-  "education.html": {
-    "bytes": 12833,
-    "sha256": "91e66833f22b8b2fca529500578ebd7ae659aeb06bdb1ea082bdd5f21e7234e5"
-  },
-  "proposal.html": {
-    "bytes": 14563,
-    "sha256": "647ab145ca735fb9d9ff5031e169a441d2e0bbccce1bc9cc79ea0ea1f2daf31a"
-  },
-  "sitemap.xml": {
-    "bytes": 1047,
-    "sha256": "514e138e6914b35b67a2fb946de3461ba6cc6bc688326b784b6ab41d935e3e61"
-  },
-  "solutions.html": {
-    "bytes": 8816,
-    "sha256": "42487de7dda5a3696a475c085ed78a52a8637a142d98ea21a708aead0ff31ce1"
+  "sha256": {
+    "index.html": "cd145ded8b3f9fee3388bcd0f17ad15d9dc6b5ea70fe1b47c2d39f861e19eaac"
   }
 }
