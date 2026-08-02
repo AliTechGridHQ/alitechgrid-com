@@ -26,42 +26,30 @@
   const nav = document.querySelector("[data-main-nav]");
   if (nav) {
     const trainingLink = nav.querySelector('a[href="education.html"]');
-    if (trainingLink) trainingLink.textContent = "AI & Cloud Training";
+    if (trainingLink) trainingLink.textContent = "Training";
 
-    if (!nav.querySelector('a[href="proposal.html"]')) {
-      const proposalLink = document.createElement("a");
-      proposalLink.href = "proposal.html";
-      proposalLink.textContent = "Request Proposal";
-      const contactLink = nav.querySelector('a[href="contact.html"]');
-      if (contactLink) nav.insertBefore(proposalLink, contactLink);
-      else nav.appendChild(proposalLink);
-    }
+    // Request Proposal is the single primary header action, not an extra nav item.
+    nav.querySelectorAll('a[href="proposal.html"]').forEach((link) => link.remove());
   }
 
-  const path = window.location.pathname.toLowerCase();
   const headerCta = document.querySelector(".header-cta");
-  if (headerCta && (path.endsWith("/education.html") || path.endsWith("/proposal.html"))) {
+  if (headerCta) {
     headerCta.removeAttribute("data-consultation-link");
     headerCta.href = "proposal.html";
     headerCta.target = "";
     headerCta.rel = "";
-    headerCta.textContent = "Request training proposal";
+    headerCta.textContent = "Request Proposal";
   }
 
+  const path = window.location.pathname.toLowerCase();
   if (path.endsWith("/") || path.endsWith("/index.html")) {
     const actions = document.querySelector(".hero-actions");
     if (actions && !actions.querySelector('a[href="education.html"]')) {
       const training = document.createElement("a");
       training.className = "button button-secondary";
       training.href = "education.html";
-      training.textContent = "Explore AI & Cloud training";
+      training.textContent = "Explore AI, Sovereign AI & Cloud Training";
       actions.appendChild(training);
-
-      const proposal = document.createElement("a");
-      proposal.className = "button button-secondary";
-      proposal.href = "proposal.html";
-      proposal.textContent = "Request training proposal";
-      actions.appendChild(proposal);
     }
   }
 
@@ -77,10 +65,12 @@
   const form = document.querySelector("[data-email-request-form]");
   if (form) {
     const projectType = form.querySelector('select[name="projectType"]');
-    if (projectType && !Array.from(projectType.options).some(o => o.value === "AI and cloud training proposal")) {
+    if (projectType && !Array.from(projectType.options).some(
+      (option) => option.value === "AI, sovereign AI and cloud training proposal"
+    )) {
       const option = document.createElement("option");
-      option.value = "AI and cloud training proposal";
-      option.textContent = "AI and cloud training proposal";
+      option.value = "AI, sovereign AI and cloud training proposal";
+      option.textContent = "AI, sovereign AI and cloud training proposal";
       projectType.insertBefore(option, projectType.firstChild);
     }
 

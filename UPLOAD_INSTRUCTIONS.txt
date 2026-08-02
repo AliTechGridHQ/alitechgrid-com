@@ -1,28 +1,64 @@
-ALITECHGRID.COM — AI, SOVEREIGN AI & CLOUD TRAINING PORTAL UPDATE
+ALITECHGRID.COM — FINAL AI, SOVEREIGN AI & CLOUD PATCH
 
-This patch contains:
-- education.html — flagship AI, Sovereign AI & Cloud Training portal
-- proposal.html — Request an AI/Sovereign AI/Cloud Training Proposal form
-- assets/js/main.js — adds Training and Request Proposal links across the website
-- sitemap.xml — includes the proposal page and prioritizes training
+PURPOSE
+This is a controlled update for the international website only:
+  Repository: AliTechGridHQ/alitechgrid-com
+  Domain: https://alitechgrid.com
 
-UPLOAD
+FILES IN THIS PATCH
+- solutions.html
+  Stronger AI, Sovereign AI and Cloud positioning; revised hero and solution details.
+- education.html
+  Flagship AI, Sovereign AI and Cloud training portal.
+- proposal.html
+  Request an AI/Sovereign AI/Cloud training proposal workflow.
+- assets/js/main.js
+  Simplifies the header across the website to:
+  Home | Solutions | Training | ADAPT-UDL | Partnerships | About | Contact
+  and uses one primary header button: Request Proposal.
+- sitemap.xml
+  Adds proposal.html and prioritizes the training and proposal pages.
+
+IMPORTANT SAFETY
+- Upload only to AliTechGridHQ/alitechgrid-com.
+- Do not upload to AliTechGridHQ/alitechgrid-ca.
+- Do not delete or replace the CNAME file.
+- Do not change Cloudflare or GoDaddy nameservers.
+
+UPLOAD STEPS
 1. Extract this ZIP.
 2. Open GitHub repository: AliTechGridHQ/alitechgrid-com
-3. Click Add file (+) → Upload files.
-4. Upload the CONTENTS of this extracted folder.
-5. Existing education.html, assets/js/main.js and sitemap.xml will be replaced.
-6. proposal.html will be added.
+3. Select Add file → Upload files.
+4. Upload these items from the extracted folder:
+   - solutions.html
+   - education.html
+   - proposal.html
+   - sitemap.xml
+   - assets folder
+5. GitHub will show existing files being replaced and proposal.html being added.
+6. Commit directly to the main branch.
 7. Commit message:
-   Add AI, sovereign AI and cloud training proposal portal
-8. Commit directly to main.
-9. Wait for GitHub Pages to redeploy.
+   Finalize AI, sovereign AI and cloud positioning
+8. Wait for GitHub Pages deployment to complete.
 
-TEST
+TEST AFTER DEPLOYMENT
+- https://alitechgrid.com/
+- https://alitechgrid.com/solutions.html
 - https://alitechgrid.com/education.html
 - https://alitechgrid.com/proposal.html
-- Submit one proposal test and confirm it prepares an email to:
-  training@alitechgrid.com
+- https://alitechgrid.com/contact.html
+- https://www.alitechgrid.com/
 
-IMPORTANT
-Confirm that training@alitechgrid.com exists as a Zoho alias or mailbox before public use.
+FUNCTIONAL CHECKS
+- Header contains no separate Request Proposal nav item.
+- Header has one Request Proposal button.
+- Solutions hero mentions AI, Sovereign AI and Cloud.
+- Training page contains a Sovereign AI capability section.
+- Proposal form prepares an email addressed to training@alitechgrid.com.
+- Mobile menu opens and closes.
+
+EMAIL CHECK
+Confirm training@alitechgrid.com exists as a Zoho mailbox or alias.
+
+ROLLBACK
+GitHub → repository → Commits → open the previous commit → use Revert or restore the prior file versions.
