@@ -1,0 +1,36 @@
+ALITECHGRID.COM — GITHUB UPLOAD GUIDE
+
+1. Create the public repository:
+   AliTechGridHQ/alitechgrid-com
+
+2. Extract the website ZIP.
+
+3. In GitHub, click Add file → Upload files.
+
+4. Upload ALL files and folders INSIDE the extracted package.
+   The repository root must contain:
+   index.html
+   solutions.html
+   education.html
+   adapt-udl.html
+   partnerships.html
+   about.html
+   contact.html
+   assets/
+   robots.txt
+   sitemap.xml
+
+5. Commit message:
+   Initial AliTechGrid International website
+
+6. Enable GitHub Pages:
+   Settings → Pages → Deploy from a branch → main → /(root)
+
+7. Test the temporary address before changing DNS.
+
+8. After the temporary site works, add the custom domain in GitHub Pages:
+   alitechgrid.com
+
+9. GitHub will create/manage the CNAME file.
+
+10. Configure Cloudflare only after the temporary site works.

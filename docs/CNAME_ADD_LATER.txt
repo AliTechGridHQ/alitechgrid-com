@@ -1,0 +1,10 @@
+After the temporary GitHub Pages site is working:
+
+1. Open repository Settings → Pages.
+2. In Custom domain, enter:
+   alitechgrid.com
+3. Click Save.
+4. GitHub will create/manage the CNAME file.
+5. Then configure DNS at the authoritative provider.
+
+Do not add the custom domain before the temporary GitHub Pages site has been tested.
