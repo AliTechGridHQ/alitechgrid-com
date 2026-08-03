@@ -1,13 +1,39 @@
 {
   "target_repository": "AliTechGridHQ/alitechgrid-com",
-  "files": [
-    "index.html"
+  "measurement_id": "G-GQZFT2RKFQ",
+  "html_files_updated": [
+    "404.html",
+    "about.html",
+    "accessibility.html",
+    "adapt-udl.html",
+    "contact.html",
+    "education.html",
+    "index.html",
+    "partnerships.html",
+    "privacy.html",
+    "proposal.html",
+    "solutions.html",
+    "terms.html"
   ],
-  "change": {
-    "from": "AliTechGrid International \u00b7 AI \u00b7 Cloud \u00b7 Education",
-    "to": "ALITECHGRID INTERNATIONAL \u00b7 AI \u00b7 SOVEREIGN AI \u00b7 CLOUD"
-  },
+  "privacy_disclosure_updated": true,
+  "excluded": [
+    "CNAME",
+    "DNS records",
+    "Cloudflare configuration"
+  ],
   "sha256": {
-    "index.html": "cd145ded8b3f9fee3388bcd0f17ad15d9dc6b5ea70fe1b47c2d39f861e19eaac"
+    "404.html": "51835e47adefd8322f55201ce5f7f997787fc3e9f37d426105b9a732a1be7b38",
+    "UPLOAD_INSTRUCTIONS.txt": "7dc45922c615a7fb8579a768a8a52ccb3acfe760892ef8ba1ad235090a58dfc6",
+    "about.html": "03e5cacbb2002af4b819fb3d36d12b8aab05acbcad9f004546ba55915ea88c45",
+    "accessibility.html": "6b8ba0fe9db28eba1f6239ef251f2a55550d3649f5df1b440b3308f93460dd5c",
+    "adapt-udl.html": "ccf70ca6b07e89d18c554c72e4b1f470017ca7dc0d0f51c732eca1cb4df84912",
+    "contact.html": "7ac83103f282dc74e7ef4e45a3c51203caf042f4ac889d2366a21912ea8564ff",
+    "education.html": "386308bfc4cf6b1a13a0ff481dcf238dcef9e61bd651a553c41f4b76be6ce56f",
+    "index.html": "c164ac3c024b0053a3ff372dfc56acaec2492dde728915e73e482a277946826a",
+    "partnerships.html": "14f18bc66121f60c9d808e4fe9441728e8409668f7ece0d9a247d7430a944c6d",
+    "privacy.html": "acd0adfec7f147df4c251cb5d242e72b9b3d7fe5b72e2acd5cbce76f387a2bae",
+    "proposal.html": "c6bd4443588b368ca5fdb771dd3e7f76c95acc30596b57bf7600c01d15333134",
+    "solutions.html": "10e7007c7464ea700d98fdd2e21b550a4b6fc8976bffdface304d097a6042ce7",
+    "terms.html": "1b6a06509b2dabdfcec3543a07b02e7341c9f7e98b6c461d256ca573bdbc90c4"
   }
 }
