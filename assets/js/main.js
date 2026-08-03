@@ -93,4 +93,83 @@ ${data.get("message") || ""}`
       window.location.href = `mailto:${config.contactEmail || "contact@alitechgrid.com"}?subject=${subject}&body=${body}`;
     });
   }
+
+
+  // Public AliTechGrid business telephone and click-to-call support.
+  const businessPhoneDisplay = "+1 778-358-4040";
+  const businessPhoneHref = "tel:+17783584040";
+
+  const createPhoneLink = (label, className = "") => {
+    const link = document.createElement("a");
+    link.href = businessPhoneHref;
+    link.textContent = label;
+    link.setAttribute("aria-label", `Call AliTechGrid at ${businessPhoneDisplay}`);
+    link.dataset.phoneLink = "true";
+    if (className) link.className = className;
+    return link;
+  };
+
+  // Add the telephone to Organization structured data for search engines.
+  document.querySelectorAll('script[type="application/ld+json"]').forEach((script) => {
+    try {
+      const data = JSON.parse(script.textContent);
+      if (data && (data["@type"] === "Organization" || data["@type"] === "LocalBusiness")) {
+        data.telephone = businessPhoneDisplay;
+        script.textContent = JSON.stringify(data, null, 2);
+      }
+    } catch {
+      // Leave unrelated or non-standard structured data unchanged.
+    }
+  });
+
+  // Show a call option on the international homepage.
+  if (path.endsWith("/") || path.endsWith("/index.html")) {
+    const actions = document.querySelector(".hero-actions");
+    if (actions && !actions.querySelector('a[href^="tel:"]')) {
+      actions.appendChild(createPhoneLink(`Call ${businessPhoneDisplay}`, "button button-secondary"));
+    }
+  }
+
+  // Replace the old internal Zoho-planning note with the live business phone.
+  if (path.endsWith("/contact.html")) {
+    const consultationRow = Array.from(document.querySelectorAll(".contact-panel .contact-row"))
+      .find((row) => row.textContent.includes("A separate international Zoho consultation page"));
+    if (consultationRow) {
+      consultationRow.innerHTML = `<strong>Phone consultation</strong><br><a href="${businessPhoneHref}" data-phone-link="true">${businessPhoneDisplay}</a><br><span class="muted">Press 2 for AI, cloud and training inquiries.</span>`;
+    }
+  }
+
+  // Add a direct call button to the proposal page.
+  if (path.endsWith("/proposal.html")) {
+    const proposalButtons = document.querySelector(".proposal-help .button-row");
+    if (proposalButtons && !proposalButtons.querySelector('a[href^="tel:"]')) {
+      proposalButtons.appendChild(createPhoneLink("Call AliTechGrid", "button button-secondary"));
+    }
+  }
+
+  // Display the business phone in the footer on every page.
+  const footerIdentity = document.querySelector(".site-footer .footer-grid > div:first-child");
+  if (footerIdentity && !footerIdentity.querySelector(".footer-phone")) {
+    const phoneLine = document.createElement("p");
+    phoneLine.className = "footer-phone";
+    phoneLine.append("Business phone: ");
+    phoneLine.appendChild(createPhoneLink(businessPhoneDisplay));
+    footerIdentity.appendChild(phoneLine);
+  }
+
+  // Measure click-to-call actions in the correct GA4 property.
+  document.querySelectorAll('a[href^="tel:"]').forEach((link) => {
+    if (link.dataset.phoneTrackingReady === "true") return;
+    link.dataset.phoneTrackingReady = "true";
+    link.addEventListener("click", () => {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "phone_click", {
+          phone_number: businessPhoneDisplay,
+          page_location: window.location.href,
+          link_text: link.textContent.trim()
+        });
+      }
+    });
+  });
+
 })();
