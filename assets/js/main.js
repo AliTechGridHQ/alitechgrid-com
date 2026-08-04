@@ -94,7 +94,6 @@ ${data.get("message") || ""}`
     });
   }
 
-
   // Public AliTechGrid business telephone and click-to-call support.
   const businessPhoneDisplay = "+1 778-358-4040";
   const businessPhoneHref = "tel:+17783584040";
@@ -172,4 +171,23 @@ ${data.get("message") || ""}`
     });
   });
 
+})();
+
+// Load the AliTechGrid International virtual assistant on every page.
+(() => {
+  const cssHref = "assets/css/chatbot.css";
+  if (!document.querySelector(`link[href="${cssHref}"]`)) {
+    const link = document.createElement("link");
+    link.rel = "stylesheet";
+    link.href = cssHref;
+    document.head.appendChild(link);
+  }
+
+  const scriptSrc = "assets/js/chatbot.js";
+  if (!document.querySelector(`script[src="${scriptSrc}"]`)) {
+    const script = document.createElement("script");
+    script.src = scriptSrc;
+    script.defer = true;
+    document.body.appendChild(script);
+  }
 })();
