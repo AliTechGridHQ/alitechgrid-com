@@ -83,4 +83,5 @@
  }
  if(document.getElementById('solution-engine'))loadFeatureScript('assets/js/pdf-export-fix.js','solution-pdf-export');
  if(document.getElementById('network-join-form'))loadFeatureScript('assets/js/network-export-fix.js','network-pdf-export');
+ if(document.getElementById('certificate')&&document.getElementById('print-sample'))loadFeatureScript('assets/js/credential-export-fix.js','credential-sample-pdf');
 })();

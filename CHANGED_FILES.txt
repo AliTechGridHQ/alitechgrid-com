@@ -1,0 +1,25 @@
+AliTechGrid.com — Production Functional Rebuild
+Date: 2026-08-14
+
+CHANGED FILES
+1. assets/js/main.js
+   - Preserves current navigation, AI Guide, FacultyOS demo request and GA4 logic.
+   - Adds conditional feature loading only on the AI Solution Engine and Network pages.
+
+2. assets/js/pdf-export-fix.js
+   - Activates direct Blueprint PDF downloads.
+   - Activates direct Decision Document PDF downloads.
+   - Preserves result state and adds separate Print controls.
+
+3. assets/js/network-export-fix.js
+   - Replaces the Collaboration Profile window.print() action with a direct PDF download.
+   - Keeps Email, WhatsApp, Copy and browser-state behavior intact.
+
+NO CHANGE
+- Homepage design/content
+- AI diagnostic scoring/recommendation logic
+- Business Case / Business Plan / Feasibility / Proposal / MoU / Implementation / Leadership document content
+- Collaboration page wording
+- FacultyOS page content
+- Credential Studio SAMPLE-only controls
+- DNS / CNAME / Cloudflare / email DNS

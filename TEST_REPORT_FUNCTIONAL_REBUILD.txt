@@ -1,0 +1,76 @@
+ALITECHGRID.COM — FUNCTIONAL QA REPORT
+Build: Production Functional Rebuild
+Date: 2026-08-14
+
+RESULT: PASS FOR STATIC / CODE QA
+
+AI SOLUTION ENGINE
+PASS - Seven-step form and required-field validation are present in current production source.
+PASS - Readiness scoring, priority gaps, three scenarios, architecture direction, SWOT, 90-day roadmap and KPI generation are present.
+PASS - Decision Document Studio exposes 8 document types:
+       Comprehensive AI Strategy & Feasibility Report
+       Business Case
+       Business Plan
+       Feasibility Study
+       Partnership / Solution Proposal
+       Draft MoU (non-binding working draft)
+       Implementation Plan
+       Leadership Decision Brief
+PASS - Source branches exist for Business Plan, Feasibility, Proposal, MoU and the other document types.
+FIXED - Blueprint PDF no longer relies on the original window.print() action.
+FIXED - Decision Document PDF no longer relies on the original window.print() action.
+PASS - PDF export patch uses capture-phase interception so the original print handler does not run.
+PASS - PDF staging uses an in-document absolute render surface rather than an off-screen fixed element, reducing blank-capture risk.
+PASS - Result state is intentionally preserved after PDF download.
+
+COLLABORATION / NETWORK
+PASS - Collaboration page routes deeper document generation through the AI Solution Engine.
+PASS - Network Match Preview generates complementary collaboration roles and governance guidance.
+PASS - Organization / Individual profile switching is implemented.
+PASS - Required email, country/region, interest and follow-up fields are validated by the form.
+PASS - Collaboration request reference generation is implemented.
+PASS - Prepared summary includes pathway, next step and legal/non-affiliation notice.
+PASS - Email, WhatsApp and Copy Summary controls remain intact.
+FIXED - Collaboration Profile now downloads directly as PDF instead of invoking window.print().
+
+FACULTYOS
+PASS - Demo form IDs match main.js handlers.
+PASS - Required name/email/organization validation is present.
+PASS - Prepared request remains local until visitor chooses Email or WhatsApp.
+PASS - Email, WhatsApp and Copy Request actions are wired.
+
+CREDENTIAL STUDIO
+PASS - Public credential types are sample-only.
+PASS - Collaboration recognition explicitly states that it does not create a legal partnership.
+PASS - Course/training/participation/appreciation/acknowledgement sample switching is implemented.
+FIXED - Public credential SAMPLE output now uses Download SAMPLE PDF instead of the old window.print() path.
+PASS - Downloaded SAMPLE remains visibly marked SAMPLE · NOT VALID and is not treated as an issued credential.
+
+AI GUIDE / NAVIGATION / ANALYTICS
+PASS - Mobile/menu and dropdown handlers retained unchanged.
+PASS - AI Guide routes FacultyOS, Training, Network, Collaboration, Solution Engine, Sovereign AI, Credentials, Consulting and Contact.
+PASS - GA4 production-only loading retained: G-GQZFT2RKFQ.
+
+SECURITY / PRIVACY
+PASS - No AI/API key added.
+PASS - PDF document content is rendered in-browser; no PDF-generation API receives the diagnostic/document content.
+NOTE - The PDF rendering library itself is loaded from cdnjs only when a PDF is requested.
+
+AUTOMATED BUILD CHECKS PERFORMED ON DELIVERED FILES
+- JavaScript syntax: Node.js --check
+- Loader presence and conditional page targeting
+- PDF action interception / state-preservation logic
+- Required deliverable file presence
+
+LIMITATION
+This execution environment cannot run a full interactive Chromium session against the live public site. Final browser acceptance testing should therefore be performed after GitHub Pages deploys: Edge/Chrome desktop plus one mobile browser. The code-path and structural QA above were completed before delivery.
+
+
+HEADLESS CHROMIUM DOCUMENT QA
+=============================
+PASS - Blueprint download intercepts old print handler and preserves page state.
+PASS - Decision Document download intercepts old print handler and preserves page state.
+PASS - Collaboration Profile download intercepts old print handler and preserves page state.
+PASS - Credential SAMPLE switching passed for all six types.
+PASS - Credential SAMPLE direct PDF intercepts old print handler and preserves SAMPLE watermark/state.
+No page errors were raised in the synthetic browser acceptance harness.

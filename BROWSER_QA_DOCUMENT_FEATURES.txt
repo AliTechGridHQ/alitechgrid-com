@@ -1,0 +1,132 @@
+ALITECHGRID.COM — DOCUMENT FEATURE BROWSER QA
+Date: 2026-08-14
+Test engine: Headless Chromium via Playwright
+Scope: Rebuilt document-export layer plus current documented output contracts
+
+BROWSER EXECUTION RESULTS
+=========================
+
+PASS — AI Solution Blueprint PDF
+- New control label: Download Blueprint PDF
+- html2pdf save path invoked: 1
+- Legacy window.print path invoked: 0
+- Browser location unchanged after export
+- Result state preserved
+
+PASS — AI Decision Document PDF
+- New control label: Download Decision PDF
+- Same direct client-side PDF path used for the currently generated .decision-doc
+- Legacy window.print path invoked: 0
+- Browser location unchanged after export
+- Generated document remains on screen
+
+PASS — AI Collaboration Network Profile PDF
+- New control label: Download Collaboration PDF
+- html2pdf save path invoked: 1
+- Legacy window.print path invoked: 0
+- Browser location unchanged after export
+- Collaboration summary remains available
+
+PASS — Credential Studio protected SAMPLE PDF
+- All six public sample types switched successfully:
+  1. Certificate of Training Completion
+  2. Certificate of Course Completion
+  3. Certificate of Participation
+  4. Certificate of Collaboration Recognition
+  5. Certificate of Appreciation
+  6. Certificate of Acknowledgement
+- SAMPLE · NOT VALID watermark remained present
+- New control label: Download SAMPLE PDF
+- html2pdf save path invoked: 1
+- Legacy window.print path invoked: 0
+- Browser location unchanged after export
+
+CURRENT DOCUMENT GENERATION CONTRACT VERIFIED FROM PRODUCTION SOURCE
+===================================================================
+
+PASS — Comprehensive AI Strategy & Feasibility Report
+PASS — Business Case
+PASS — AI Initiative Business Plan
+PASS — Feasibility Study
+PASS — Partnership / Solution Proposal
+PASS — Draft Memorandum of Understanding — NON-BINDING WORKING DRAFT
+PASS — 90-Day AI Implementation Plan
+PASS — Leadership Decision Brief
+
+The Decision Document Studio uses one shared document-output container and one shared
+PDF export path. Therefore, once a selected document type is generated into the
+decision-doc container, the same tested PDF exporter handles all eight document types.
+
+COLLABORATION DOCUMENT SAFEGUARDS VERIFIED
+==========================================
+
+PASS — Joint credential collaboration can recommend:
+- Credential Feasibility Study
+- Partnership Proposal
+- Draft MoU
+
+PASS — Proposal includes:
+- Institution/client responsibilities
+- AliTechGrid responsibilities
+- Governance
+- Phasing
+- Success measures
+- Commercial/legal validation notice
+
+PASS — Draft MoU includes:
+- Non-binding working-draft status
+- Academic credential authority limitation
+- AI/data/privacy responsibilities
+- IP and branding terms requiring agreement
+- Financial principles
+- Confidentiality
+- Term/review/termination
+- Legal review warning
+
+PASS — Collaboration Network request output includes:
+- Unique request reference
+- Profile summary
+- Preliminary collaboration pathway
+- Recommended next step
+- Non-affiliation / non-partnership disclaimer
+- Email / WhatsApp / Copy controls
+- Direct PDF in rebuilt package
+
+FACULTYOS REQUEST WORKFLOW
+==========================
+
+PASS — Required name/email/organization validation contract is present
+PASS — Prepared request remains local until Email or WhatsApp is selected
+PASS — Email, WhatsApp and Copy Request controls remain mapped to the prepared request
+PASS — No document-export modification interferes with FacultyOS
+
+CREDENTIAL SAFETY
+=================
+
+PASS — Public website remains SAMPLE-only
+PASS — No official issuance is created by downloading the SAMPLE PDF
+PASS — Collaboration recognition wording says it does not create a legal partnership
+PASS — Authorized signature remains a placeholder in public samples
+PASS — Public sample carries SAMPLE · NOT VALID protection
+
+PDF LIBRARY
+===========
+
+Verified target: html2pdf.js 0.14.0
+Configured bundle:
+https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.14.0/html2pdf.bundle.min.js
+
+PRIVACY / STATE
+===============
+
+PASS — Rebuilt PDF scripts do not POST document/form content to a PDF service
+PASS — No redirect-to-home assignment exists in rebuilt PDF export scripts
+PASS — Original page/result state is preserved after download
+
+IMPORTANT DEPLOYMENT NOTE
+=========================
+
+The GitHub repository currently contains the Solution Engine and Collaboration PDF
+bootstrap. The newly hardened Credential Studio PDF loader/file is included in the
+updated rebuild ZIP and must be uploaded for the Credential Studio direct-download
+improvement to become live.

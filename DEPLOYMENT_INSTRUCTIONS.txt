@@ -1,0 +1,37 @@
+AliTechGrid.com — Production Functional Rebuild Deployment
+
+IMPORTANT
+AliTechGrid.com is published by GitHub Pages. Cloudflare is authoritative DNS only for the .com domain in the current production arrangement. Do not wait for a Cloudflare Pages build.
+
+UPLOAD
+Open AliTechGridHQ/alitechgrid-com and upload the CONTENTS of this ZIP to the repository root, preserving folders.
+
+The upload must replace/add only:
+- assets/js/main.js          (REPLACE existing)
+- assets/js/pdf-export-fix.js (REPLACE existing, if prompted)
+- assets/js/network-export-fix.js (ADD)
+- assets/js/credential-export-fix.js (ADD)
+
+Do not delete or replace other website files.
+
+SUGGESTED COMMIT
+Fix PDF exports and collaboration document download workflows
+
+DEPLOYMENT CHECK
+1. GitHub -> repository -> Actions / Pages: wait for Pages deployment to finish.
+2. Open https://alitechgrid.com/ai-solution-engine.html
+3. Hard refresh: Ctrl+F5.
+4. Complete the seven-step diagnostic.
+5. Confirm the button reads Download Blueprint PDF.
+6. Download the Blueprint and confirm the browser stays on the result.
+7. Generate every Decision Document type and download at least Proposal and Draft MoU PDFs.
+8. Open https://alitechgrid.com/network.html
+9. Prepare an Organization and an Individual collaboration profile.
+10. Confirm the button reads Download Collaboration PDF and the page state remains intact after download.
+
+ROLLBACK
+If necessary, restore the previous assets/js/main.js and remove assets/js/network-export-fix.js. The existing HTML pages and core engines are not modified by this rebuild.
+
+11. Open https://alitechgrid.com/credential-studio.html
+12. Switch through all six SAMPLE certificate types.
+13. Confirm Download SAMPLE PDF creates a landscape PDF that remains visibly SAMPLE · NOT VALID.
