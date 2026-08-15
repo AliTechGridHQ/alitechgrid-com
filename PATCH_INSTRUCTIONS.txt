@@ -1,0 +1,67 @@
+AliTechGrid.com — AI Solution Engine PDF Export Fix
+======================================================
+
+PURPOSE
+-------
+This targeted patch fixes the two PDF actions on the live AI Solution Engine.
+
+It changes:
+1) Blueprint: "Print / Save Blueprint" -> "Download Blueprint PDF"
+2) Decision Document: "Print / Save as PDF" -> "Download Decision PDF"
+3) Adds a separate "Print" button beside each PDF button.
+4) Keeps the user on the results page. No redirect to Home.
+5) Keeps all diagnostic answers/results in the current session.
+6) Generates PDFs client-side. No diagnostic/document content is sent to a PDF API.
+
+FILES
+-----
+Upload:
+  assets/js/pdf-export-fix.js
+
+Then edit:
+  ai-solution-engine.html
+
+At the very bottom, find:
+  <script src="assets/js/main.js"></script><script src="assets/js/solution-engine.js"></script>
+
+Change it to:
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/solution-engine.js"></script>
+  <script src="assets/js/pdf-export-fix.js"></script>
+
+IMPORTANT
+---------
+Do NOT remove solution-engine.js.
+The new PDF patch must load AFTER solution-engine.js.
+
+The patch loads html2pdf.js v0.14.0 from cdnjs only when the user requests a PDF.
+PDF rendering occurs in the browser; the document content is not uploaded to a PDF service.
+
+RECOMMENDED COMMIT MESSAGE
+--------------------------
+Fix AI Solution Engine PDF downloads and preserve result state
+
+TEST
+----
+1. Open https://alitechgrid.com/ai-solution-engine.html
+2. Complete all seven diagnostic steps.
+3. Confirm the Blueprint appears.
+4. Click "Download Blueprint PDF".
+   Expected: a .pdf file downloads; the page remains on the Blueprint.
+5. Select each Decision Document type and click "Generate Decision Document".
+6. Click "Download Decision PDF".
+   Expected: a branded .pdf file downloads; the page remains on the generated document.
+7. Click the new "Print" buttons.
+   Expected: a separate print window opens; the original results page remains untouched.
+8. Test on Edge/Chrome desktop and one mobile browser.
+9. Hard-refresh after deployment (Ctrl+F5) to clear the previous JS from cache.
+
+ROLLBACK
+--------
+Remove:
+  <script src="assets/js/pdf-export-fix.js"></script>
+
+and optionally delete:
+  assets/js/pdf-export-fix.js
+
+No other site files are affected.

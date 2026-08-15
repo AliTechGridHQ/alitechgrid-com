@@ -1,0 +1,2 @@
+<!-- Add this AFTER assets/js/solution-engine.js -->
+<script src="assets/js/pdf-export-fix.js"></script>
