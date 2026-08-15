@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 145" role="img" aria-labelledby="t d">
+<title id="t">AliTechGrid certificate mark</title>
+<desc id="d">AliTechGrid certificate branding</desc>
+<defs>
+  <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#11bfb2"/><stop offset="1" stop-color="#596ee8"/></linearGradient>
+</defs>
+<rect x="5" y="16" width="102" height="102" rx="26" fill="#071a2e" stroke="#234a68" stroke-width="3"/>
+<g stroke="url(#g)" stroke-width="7" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M24 94 53 38 82 94M37 74h32"/>
+  <circle cx="24" cy="94" r="5" fill="#11bfb2"/><circle cx="53" cy="38" r="5" fill="#596ee8"/><circle cx="82" cy="94" r="5" fill="#11bfb2"/>
+  <path d="M89 38h9v18h-9zM89 65h9v18h-9z" opacity=".9"/>
+</g>
+<text x="130" y="73" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="58" font-weight="780" fill="#0b2945">AliTech<tspan fill="#4d6fe5">Grid</tspan></text>
+<text x="132" y="108" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="16" font-weight="700" letter-spacing="3.3" fill="#537086">SOVEREIGN AI · EDUCATION · INNOVATION</text>
+</svg>

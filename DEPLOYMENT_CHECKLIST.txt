@@ -1,0 +1,60 @@
+AliTechGrid.com — Deployment Checklist
+Build: Solution Intelligence + FacultyOS + Document Studio + AI Collaboration Network
+Date: 2026-08-14
+
+1. GitHub
+[ ] Open AliTechGridHQ/alitechgrid-com
+[ ] Upload the CONTENTS of this folder to repository root
+[ ] Confirm index.html is at repository root
+[ ] Confirm assets/ folder is present
+[ ] Confirm network.html, facultyos.html, ai-solution-engine.html and credential-studio.html are present
+[ ] Confirm CNAME contains only: alitechgrid.com
+[ ] Suggested commit message:
+    Launch AliTechGrid AI Collaboration Network and Solution Intelligence platform
+
+2. Cloudflare Pages
+[ ] Create/connect a NEW Pages project for alitechgrid-com
+[ ] Connect AliTechGridHQ/alitechgrid-com
+[ ] Production branch: main
+[ ] Static HTML: no framework/build command required unless Cloudflare UI requires one
+[ ] Deploy and test the pages.dev preview BEFORE connecting the domain
+
+3. Preview QA
+[ ] Home page and mobile menu
+[ ] AI Solution Engine completes diagnostic and generates decision documents
+[ ] FacultyOS page and Demo Request form
+[ ] AI Collaboration Network page
+[ ] Collaboration Match Preview
+[ ] Join as Organization and Join as Individual Professional
+[ ] Required email field rejects invalid/missing email
+[ ] Country/region, need and consent are required
+[ ] Collaboration Profile & Opportunity Summary appears after form completion
+[ ] Request reference is generated
+[ ] Print / Save PDF, Email, WhatsApp and Copy Summary controls work
+[ ] Collaboration and Solutions pages link to Network
+[ ] AI Guide routes Network questions correctly
+[ ] Credential Studio public samples remain SAMPLE · NOT VALID
+[ ] Contact email / phone / WhatsApp links
+[ ] Privacy / Terms / Accessibility
+
+4. Domain
+[ ] Attach alitechgrid.com
+[ ] Attach www.alitechgrid.com or redirect www to apex
+[ ] Do NOT edit/remove Zoho Mail MX/TXT records
+[ ] Remove any old .com -> .ca redirect rule only when the new Pages preview is verified
+
+5. Search / Analytics
+[ ] Confirm robots.txt
+[ ] Submit https://alitechgrid.com/sitemap.xml in Google Search Console
+[ ] Request indexing of key pages including /network.html
+[ ] Verify GA4 real-time traffic
+
+6. Public trust & safety
+[ ] No API keys exposed in browser files
+[ ] Public users cannot issue valid certificates
+[ ] Public collaboration preview does not expose a real participant/partner directory
+[ ] No public profile or affiliation record is automatically created by the Network form
+[ ] Organization logos / partner status are published only with authorization
+[ ] Network expressions of interest do not create endorsement, partnership or contractual status
+[ ] Public forms advise users not to enter sensitive/confidential information
+[ ] Maple accent is branding only and does not imply Government of Canada endorsement

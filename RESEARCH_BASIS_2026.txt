@@ -1,0 +1,24 @@
+AliTechGrid.com — 2026 Research Basis
+
+OECD Digital Education Outlook 2026
+- Generative AI can support learning when guided by intentional pedagogy.
+- Better task performance with GenAI does not automatically produce learning gains.
+- Human-centred teaching, foundational skills and purposeful use remain important.
+Source: https://www.oecd.org/en/publications/2026/01/oecd-digital-education-outlook-2026_940e0dd8.html
+
+UNESCO AI Competency Framework for Teachers
+- Human-centred mindset, ethics, AI foundations/applications, AI pedagogy and professional learning.
+Source: https://www.unesco.org/en/articles/ai-competency-framework-teachers
+
+NIST AI Risk Management Framework + GenAI Profile
+- Trustworthy AI risk management across the lifecycle; generative-AI-specific risk considerations.
+Source: https://www.nist.gov/itl/ai-risk-management-framework
+Source: https://www.nist.gov/publications/artificial-intelligence-risk-management-framework-generative-artificial-intelligence
+
+Canada AI Sovereign Compute Infrastructure Program — 2026 program guide
+- Priorities include compute capacity, speed, scalability, sovereignty and governance, economic impact.
+- Sovereignty includes Canadian-located and Canadian-governed systems, data residency and operational control.
+Source: https://ised-isde.canada.ca/site/ised/en/program-guide-artificial-intelligence-sovereign-compute-infrastructure-program-scip
+
+AliTechGrid design principle
+Use-case first. Model second. Proof before platform. Human authority by design.
