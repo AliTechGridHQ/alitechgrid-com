@@ -68,4 +68,19 @@
    const s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtag/js?id=G-GQZFT2RKFQ';document.head.appendChild(s);
    window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}window.gtag=gtag;gtag('js',new Date());gtag('config','G-GQZFT2RKFQ',{anonymize_ip:true});
  }
+
+ // Production functional bootstrap.
+ // The current public pages already load main.js, so feature fixes can be activated
+ // without changing/minifying large HTML files and without disturbing other pages.
+ function loadFeatureScript(src,key){
+   if(document.querySelector('script[data-atg-feature="'+key+'"]'))return;
+   const s=document.createElement('script');
+   s.src=src;
+   s.async=true;
+   s.dataset.atgFeature=key;
+   s.addEventListener('error',()=>console.error('AliTechGrid feature script failed to load:',src));
+   document.head.appendChild(s);
+ }
+ if(document.getElementById('solution-engine'))loadFeatureScript('assets/js/pdf-export-fix.js','solution-pdf-export');
+ if(document.getElementById('network-join-form'))loadFeatureScript('assets/js/network-export-fix.js','network-pdf-export');
 })();

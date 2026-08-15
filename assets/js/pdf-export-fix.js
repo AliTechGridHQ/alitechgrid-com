@@ -55,8 +55,8 @@
     style.id = "alitechgrid-pdf-export-styles";
     style.textContent = `
       .atg-pdf-stage{
-        position:fixed!important;
-        left:-12000px!important;
+        position:absolute!important;
+        left:0!important;
         top:0!important;
         width:794px!important;
         background:#fff!important;
